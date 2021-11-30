@@ -1,0 +1,13 @@
+query SiebenDenZwergenherrschernInIhrenHallenAusStein {
+  search(query: "schema", type: DISCUSSION, first: 7) {
+    repositoryCount
+    edges {
+      node {
+        ... on Repository {
+          id
+          name
+        }
+      }
+    }
+  }
+}
